@@ -1,23 +1,23 @@
 import io.restassured.RestAssured;
 import org.testng.annotations.Test;
 
-public class RetStoreTets {
+public class RetStoreTests {
     @Test
     public void getPetById200() {
-        String response = RestAssured
-                .given().baseUri("https://petstore.swagger.io/v2/pet/1")
+     RestAssured
+                .given().baseUri(Config.PET_STORE_BASE_HOST)
+                .basePath("/pet/1")
                 .log().uri()
                 .get()
                 .then()
-                .statusCode(200)
-                .and().extract().body().asString();
-        System.out.println(response);
+                .statusCode(200);
+
     }
 
     @Test
     public void getPetById() {
         RestAssured
-                .given().baseUri("https://petstore.swagger.io/v2/pet/3")
+                .given().baseUri(Config.PET_STORE_BASE_HOST)
                 .get()
                 .then()
                 .statusCode(404);
