@@ -9,6 +9,54 @@ public class PetEntity {
     List<Object> tags;
     String status;
 
+    public int getId() {
+        return id;
+    }
+
+    public Object getCategory() {
+        return category;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public List<String> getPhotoUrls() {
+        return photoUrls;
+    }
+
+    public List<Object> getTags() {
+        return tags;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setCategory(Object category) {
+        this.category = category;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPhotoUrls(List<String> photoUrls) {
+        this.photoUrls = photoUrls;
+    }
+
+    public void setTags(List<Object> tags) {
+        this.tags = tags;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
     public PetEntity(int id,
                      Object category,
                      String name,

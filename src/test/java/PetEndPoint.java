@@ -22,10 +22,10 @@ public class PetEndPoint {
                 .param("status",status)
                 .get().then().extract().response();
     }
-    public Response createPet(String body){
+    public Response createPet(PetEntity petEntity){
         return given()
                 .basePath(Config.CREATE_PET)
-                .body(body)
+                .body(petEntity)
                 .post()
                 .then().extract().response();
 
